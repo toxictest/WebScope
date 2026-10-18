@@ -1,0 +1,114 @@
+PASS exact host boundary fixture.test
+PASS exact host boundary a.fixture.test
+PASS exact host boundary badfixture.test
+PASS exact host boundary fixture.test.attacker.invalid
+PASS exact host boundary 127.0.0.1
+PASS exact host boundary x;touch.fixture.test
+PASS URL host case and trailing dot canonicalized
+PASS candidate names canonicalized before queueing
+PASS reject unsafe or unapproved URL http://fixture.test/
+PASS reject unsafe or unapproved URL https://fixture.test:22/
+PASS reject unsafe or unapproved URL fixture.test/
+PASS reject unsafe or unapproved URL https://fixture.test/a%2fb
+PASS reject unsafe or unapproved URL https://fixture.test/a/../b
+PASS reject unsafe or unapproved URL https://fixture.test/.%2e/
+PASS reject unsafe or unapproved URL https://fixture.test/ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+PASS query values omitted; caller must not request query references
+PASS URLMiner-derived sensitive classification /.env
+PASS URLMiner-derived sensitive classification /backup.sql
+PASS URLMiner-derived sensitive classification /config.json
+PASS URLMiner-derived sensitive classification /app.js.map
+PASS URLMiner-derived sensitive classification /db.sqlite
+PASS URLMiner-derived sensitive classification /.git/config
+PASS URLMiner-derived sensitive classification /id_rsa
+PASS normal JS remains eligible
+PASS dry-run causes no output or target requests
+PASS authorization acknowledgement required
+PASS explicit CT plan accepted without network
+PASS CT requires domain-tree authorization
+PASS oversized native response produces partial coverage
+PASS root and linked subdomain discovered without guessed names
+PASS no outside assets enter inventory
+PASS HTML script and JS import discovery
+PASS actual bounded public JS GET parsed
+PASS JS route hints exported without API execution
+PASS root sitemap locations imported
+PASS approved redirect requeued through scope validation
+PASS external links and redirect blocked
+PASS HTTP 200 sensitive candidate remains unconfirmed /.env
+PASS no sensitive body download /.env
+PASS HTTP 200 sensitive candidate remains unconfirmed /backup.sql
+PASS no sensitive body download /backup.sql
+PASS HTTP 200 sensitive candidate remains unconfirmed /db.sqlite
+PASS no sensitive body download /db.sqlite
+PASS HTTP 200 sensitive candidate remains unconfirmed /app.js.map
+PASS no sensitive body download /app.js.map
+PASS no unsafe/body request /api/data
+PASS no unsafe/body request /query.js
+PASS no unsafe/body request /logout
+PASS no unsafe/body request /private/secret
+PASS robots disallow respected even for HEAD
+PASS no external redirect connection
+PASS potential JS literals redacted and never validated
+PASS original HeaderGuard offline normalization and safe cookie flags
+PASS original DNSShield CNAME provider classifier used offline
+PASS sensitive marker absent from persisted reports SYNTHETIC_INLINE_DO_NOT_EXPORT
+PASS sensitive marker absent from persisted reports SYNTHETIC_JS_DO_NOT_EXPORT
+PASS sensitive marker absent from persisted reports DO_NOT_EXPORT_QUERY
+PASS sensitive marker absent from persisted reports DO_NOT_EXPORT_COOKIE
+PASS sensitive marker absent from persisted reports DO_NOT_EXPORT_TXT
+PASS sensitive marker absent from persisted reports DO_NOT_EXPORT_REDIRECT
+PASS sensitive marker absent from persisted reports PRIVATE_BODY_MUST_NOT_BE_REQUESTED
+PASS sensitive marker absent from persisted reports MUST_NOT_FETCH_API
+PASS temporary response bodies and headers removed
+PASS finalized report clears incomplete marker
+PASS private file and directory permissions
+PASS fixture requests preserve explicit HTTP scheme
+PASS all six integration roles explicitly declared
+PASS large hostname normalization uses bounded stdin, not oversized argv
+PASS ReconScope local normalization/import adapter executed
+PASS imported external names filtered
+PASS request cap stops collection and reports partial
+PASS native transport blocks unsafe/incomplete DNS metadata
+PASS native transport blocks unsafe/incomplete DNS mixed
+PASS native transport blocks unsafe/incomplete DNS cname
+PASS native transport blocks unsafe/incomplete DNS servfail
+PASS loopback forbidden without explicit nonpublic authorization
+PASS malformed imports fail before output/network
+PASS unsafe existing report permissions refused
+PASS output symlinks refused
+PASS overlapping output lock refused
+PASS private key rejected as CA configuration before output/network
+PASS actual TLSWatch certificate helper runs on locally collected public leaf
+PASS SurfaceIntel native TLS expiry classification retained
+PASS native local TLS hostname validation
+PASS HTTPS requests use explicit fixture CA without insecure retry
+PASS oversized option lists refused before network
+PASS dry validation rejects non-network CIDR
+PASS dry validation rejects invalid port
+PASS dry validation rejects unbounded rate
+PASS dry validation rejects excluded root
+PASS credential-shaped URL path omitted before persistence
+PASS excluded subtree boundaries
+PASS path exclusion checked before requests
+PASS forms are not submitted or crawled
+PASS robots wildcard conservatively blocks all paths
+PASS robots directories recorded without content requests
+PASS CT parser fixture candidate acceptance True
+PASS CT names remain strictly scoped
+PASS CT parser fixture candidate acceptance False
+PASS CT names remain strictly scoped
+PASS CT outage retains configured root with incomplete coverage
+PASS explicit CNAME approval permits pinned original-host request
+PASS native HTTP timeout produces partial report
+PASS interrupt test reached owned local service
+PASS SIGTERM preserves explicit partial report and exit status
+PASS SIGTERM removes private transient response files
+PASS native IPv6 loopback request pinned through SurfaceIntel
+PASS complete owned-local end-to-end run exits zero
+PASS JSON schema validation main
+PASS JSON schema validation tls
+PASS JSON schema validation ipv6
+PASS JSON schema validation signal
+PASS JSON schema validation complete
+RESULT: 113 passed, 0 failed

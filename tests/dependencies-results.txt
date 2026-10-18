@@ -1,0 +1,11 @@
+PASS help causes no package-manager call
+PASS installation plan is no-write/no-package-operation
+PASS default action detects missing dig without installing
+PASS unknown setup option rejected
+PASS ambiguous setup action rejected before installation
+PASS runtime readiness checks command presence without querying DNS
+PASS development plan does not create or install a venv
+PASS nonroot privilege guard or root mock boundary prevents real package install
+PASS machine-readable dependency recipes match DNS package names
+PASS runtime pip requirements are intentionally empty
+RESULT: 10 passed, 0 failed

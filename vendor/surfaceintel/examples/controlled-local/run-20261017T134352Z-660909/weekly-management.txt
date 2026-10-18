@@ -1,0 +1,10 @@
+SurfaceIntel weekly management report — fixture
+Window: last 7 days through 20261017T134352Z
+Runs: 3 | Complete: 2 | Partial/interrupted: 1
+Latest snapshot: 9 assets, 0 open findings, 10 coverage errors.
+Latest-run delta: 0 new candidates, 0 scope removals, 2 DNS changes, 0 resolved observations.
+
+Distinct event IDs observed in the 7-day retained history (by event kind):
+NEW_ASSET 2
+NEW_FINDING 4
+Management priorities: review high/critical evidence, certificate renewals, authorized publication, DNS changes and unavailable coverage. Historical runs with different scope/policy/modes are not assumed comparable. This is a latest-snapshot + run-health summary, not a claim that all assets were observed every day.

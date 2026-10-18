@@ -1,0 +1,533 @@
+{
+  "run_id": "run-20261018T122403Z-upt9s3xa",
+  "started_at": "2026-10-18T12:24:03Z",
+  "finished_at": "2026-10-18T12:24:07Z",
+  "scope": {
+    "domain": "fixture.test",
+    "include_subdomains": true,
+    "excluded_trees": [],
+    "excluded_paths": [],
+    "approved_cnames": [],
+    "cidrs": [
+      "127.0.0.0/8"
+    ],
+    "allow_nonpublic": true,
+    "allow_http": true,
+    "ports": [
+      33581
+    ],
+    "ca_bundle_sha256": "system-trust-store-not-hashed"
+  },
+  "scope_sha256": "beb7687d9290800ef3eb429c2085fbb2bb05881bca55ea6f99298e71d3904f00",
+  "schema_version": "1",
+  "tool": "WebScope",
+  "version": "1.0.0-rc2",
+  "domain": "fixture.test",
+  "completion": "complete_within_declared_limits",
+  "coverage": {
+    "exhaustive": false,
+    "subdomain_tree_authorized": true,
+    "external_ct_enabled": false,
+    "wordlist_discovery": false,
+    "raw_bodies_saved": false,
+    "secret_file_body_requests": false,
+    "query_urls_requested": false,
+    "js_execution": false,
+    "directory_semantics": "Inferred URL prefixes, not filesystem enumeration",
+    "request_count": 17,
+    "dns_requests_additional": true
+  },
+  "hosts": [
+    {
+      "host": "fixture.test",
+      "sources": [
+        "configured-root",
+        "linked-host"
+      ],
+      "authorization": "operator_asserted"
+    }
+  ],
+  "urls": [
+    {
+      "id": "e39c7c6986a21105ee040220294f451f55613c9f4b7b53329a7ba1223cd8f426",
+      "url": "http://fixture.test:33581/",
+      "kinds": [
+        "navigation"
+      ],
+      "sources": [
+        "host-entry"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "74557ba4813e3493b59b3ea4b557f5cab996176a41a4ad5bad076e4165ddd9cf",
+      "body_bytes": 44
+    },
+    {
+      "id": "58c3065dae8a961089475e2b66a06ed729ab23ea0ae24a8813b6fef4e4f0e2fc",
+      "url": "http://fixture.test:33581/api/data",
+      "kinds": [
+        "route_hint"
+      ],
+      "sources": [
+        "http://fixture.test:33581/app.js"
+      ],
+      "status": "RESPONSE_RECEIVED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory"
+    },
+    {
+      "id": "735aa17a82d51d66df68ee94de4b4ef403a4642d84926c70c3b0c44ff98ce36b",
+      "url": "http://fixture.test:33581/app.js",
+      "kinds": [
+        "javascript"
+      ],
+      "sources": [
+        "http://fixture.test:33581/"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "4f30cb46ec24702cc12109885011ffe0f5e19196f8bf6c332189a587e255c918",
+      "body_bytes": 117
+    },
+    {
+      "id": "22a4e69af5c187b2f6658a30099e6f50236070f81a55d0d6ae6fcf57c73d8687",
+      "url": "http://fixture.test:33581/app.js.map",
+      "kinds": [
+        "source_map_metadata"
+      ],
+      "sources": [
+        "http://fixture.test:33581/app.js"
+      ],
+      "status": "METADATA_ONLY_REVIEW_REQUIRED",
+      "http_status": 200,
+      "sensitive_candidate": true,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory"
+    },
+    {
+      "id": "67b3e264245fc2ee5749694930843cf4bffe84a6fb1bb3963a6be22f76552565",
+      "url": "http://fixture.test:33581/chunk.js",
+      "kinds": [
+        "javascript"
+      ],
+      "sources": [
+        "http://fixture.test:33581/app.js"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "ef366f3c2eb97debb172320ec326b07660c6b7dcaf2c8485e857db37ffc2b4c0",
+      "body_bytes": 24
+    },
+    {
+      "id": "85da41ae11c24a528fc9c079adb62124f536c802df039bffbcb0b27c853a4ebe",
+      "url": "http://fixture.test:33581/db.sqlite",
+      "kinds": [
+        "navigation"
+      ],
+      "sources": [
+        "http://fixture.test:33581/sitemap.xml"
+      ],
+      "status": "METADATA_ONLY_REVIEW_REQUIRED",
+      "http_status": 200,
+      "sensitive_candidate": true,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory"
+    },
+    {
+      "id": "48dad2b9556e3765a2d8b3399fbd59a494fb2371978e1900cae12142caa0533c",
+      "url": "http://fixture.test:33581/docs/sitemap",
+      "kinds": [
+        "navigation"
+      ],
+      "sources": [
+        "http://fixture.test:33581/sitemap.xml"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "60e82ae4e3610f76b6cb54ee764ad7838ecbbd9a4e486ff424bf3707afba76a4",
+      "body_bytes": 43
+    },
+    {
+      "id": "c72b1115066b65d3e9f046c94b924d2a908293682ae4318d961277b51b198be7",
+      "url": "http://fixture.test:33581/docs/start",
+      "kinds": [
+        "navigation"
+      ],
+      "sources": [
+        "http://fixture.test:33581/docs/sitemap",
+        "http://fixture.test:33581/docs/start"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "60e82ae4e3610f76b6cb54ee764ad7838ecbbd9a4e486ff424bf3707afba76a4",
+      "body_bytes": 43
+    },
+    {
+      "id": "ecac0751696bbae76ec20a42dd4b3d15ccada24654b314cee52675e0677c4dc9",
+      "url": "http://fixture.test:33581/private/",
+      "kinds": [
+        "robots_disallow_observation"
+      ],
+      "sources": [
+        "http://fixture.test:33581/robots.txt"
+      ],
+      "status": "ROBOTS_DISALLOWED_NOT_REQUESTED",
+      "http_status": null,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory"
+    },
+    {
+      "id": "d41057cb8ecdc8d7c3cb1f245b44ed379a38161d43482790c2ec89f3f3262a27",
+      "url": "http://fixture.test:33581/robots.txt",
+      "kinds": [
+        "robots"
+      ],
+      "sources": [
+        "host-entry"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": false,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "2f49e5d32fdb7a2fc5ce5390cab2b4fcdf8b4364dcc9fcec2ad50e4e9ca1da68",
+      "body_bytes": 81
+    },
+    {
+      "id": "fbffe1dc2544e7dc5debbbe12068a433dd69b5ec3b1054ea2578e71e6dceede3",
+      "url": "http://fixture.test:33581/sitemap.xml",
+      "kinds": [
+        "sitemap"
+      ],
+      "sources": [
+        "host-entry",
+        "http://fixture.test:33581/robots.txt"
+      ],
+      "status": "BOUNDED_PUBLIC_DOCUMENT_PARSED",
+      "http_status": 200,
+      "sensitive_candidate": true,
+      "query_redacted": false,
+      "directory_evidence": "path-prefix only; not proof of a filesystem directory",
+      "body_sha256": "e71cd7046b20c2e238a16b2545c96f9035772a2803c30ce345036547c23f9076",
+      "body_bytes": 134
+    }
+  ],
+  "directory_prefixes": [
+    "http://fixture.test:33581/",
+    "http://fixture.test:33581/api/",
+    "http://fixture.test:33581/docs/",
+    "http://fixture.test:33581/private/"
+  ],
+  "dns": [
+    {
+      "host": "fixture.test",
+      "type": "A",
+      "status": "ANSWER",
+      "values": "127.0.0.1",
+      "ttls": "A:30",
+      "source": "dig"
+    },
+    {
+      "host": "fixture.test",
+      "type": "AAAA",
+      "status": "NODATA",
+      "values": "",
+      "ttls": "",
+      "source": "dig"
+    },
+    {
+      "host": "fixture.test",
+      "type": "CNAME",
+      "status": "ANSWER",
+      "values": "unapproved.github.io",
+      "ttls": "CNAME:30",
+      "source": "dig",
+      "provider_hints": [
+        "GitHub Pages"
+      ]
+    },
+    {
+      "host": "fixture.test",
+      "type": "MX",
+      "status": "NODATA",
+      "values": "",
+      "ttls": "",
+      "source": "dig"
+    },
+    {
+      "host": "fixture.test",
+      "type": "NS",
+      "status": "NODATA",
+      "values": "",
+      "ttls": "",
+      "source": "dig"
+    },
+    {
+      "host": "fixture.test",
+      "type": "TXT",
+      "status": "ANSWER",
+      "values": "sha256:47022b80b9e5f29be25876fb4e5999245340ef20646d9ae76ca0a85b9662fd8d",
+      "ttls": "TXT:30",
+      "source": "dig"
+    }
+  ],
+  "tls": [],
+  "headers": [
+    {
+      "url": "http://fixture.test:33581/robots.txt",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/sitemap.xml",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/docs/sitemap",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/db.sqlite",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/app.js",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/docs/start",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/chunk.js",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/api/data",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    },
+    {
+      "url": "http://fixture.test:33581/app.js.map",
+      "method": "HEAD",
+      "header_presence": {
+        "strict-transport-security": false,
+        "content-security-policy": false,
+        "x-frame-options": false,
+        "x-content-type-options": true,
+        "referrer-policy": false,
+        "permissions-policy": false
+      },
+      "cookie_flags": [
+        {
+          "secure": true,
+          "httponly": true,
+          "samesite_present": true
+        }
+      ],
+      "cors_probe": "NOT_RUN",
+      "interpretation": "Presence only; not a security grade or policy correctness verdict."
+    }
+  ],
+  "potential_js_literals": [
+    {
+      "url": "http://fixture.test:33581/app.js",
+      "label": "api_key",
+      "value": "[REDACTED]",
+      "confidence": "LOW",
+      "status": "POTENTIAL_LITERAL_NOT_VALIDATED"
+    }
+  ],
+  "rejected_counts": {},
+  "errors": [],
+  "limits": {
+    "max_hosts": 32,
+    "max_urls": 200,
+    "max_requests": 400,
+    "depth": 3,
+    "budget": 60,
+    "timeout": 1,
+    "rate": 10
+  },
+  "integrations": {
+    "ReconScope": "Local host-list normalization/import compatibility",
+    "URLMiner": "Reused URL classification patterns; no archive crawler launch",
+    "HeaderGuard": "Original offline header normalizer; presence/cookie-flag observations",
+    "DNSShield": "Original offline CNAME provider classifier; no AXFR or selector guessing",
+    "TLSWatch": "Original local certificate checks; no protocol/cipher sweep",
+    "SurfaceIntel": "Active scope/DNS/IP pinning, DNS inventory, CT transport and TLS lifecycle"
+  }
+}

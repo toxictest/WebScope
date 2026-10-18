@@ -1,0 +1,43 @@
+{
+  "runtime_python": ">=3.9 (standard library only)",
+  "bash": ">=4.4",
+  "apt": [
+    "bash",
+    "python3",
+    "curl",
+    "bind9-dnsutils",
+    "coreutils",
+    "gawk",
+    "grep",
+    "sed",
+    "diffutils",
+    "findutils",
+    "ca-certificates",
+    "openssl"
+  ],
+  "dnf": [
+    "bash",
+    "python3",
+    "curl",
+    "bind-utils",
+    "coreutils",
+    "gawk",
+    "grep",
+    "sed",
+    "diffutils",
+    "findutils",
+    "ca-certificates",
+    "openssl"
+  ],
+  "apt_development": [
+    "python3-venv",
+    "python3-pip",
+    "shellcheck"
+  ],
+  "dnf_development": [
+    "python3-pip",
+    "ShellCheck"
+  ],
+  "pip_development": "requirements-dev.txt",
+  "automatic_install_default": false
+}

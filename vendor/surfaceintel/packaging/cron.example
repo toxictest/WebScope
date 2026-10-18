@@ -1,0 +1,6 @@
+# EXAMPLE ONLY. Do not activate until authorization/configuration is reviewed.
+# Use a private wrapper to load protected webhook environment variables.
+# Daily (or choose weekly below, not both unless intended):
+# 0 2 * * * /usr/bin/timeout -k 30s 20m /opt/surfaceintel/1.0.0-rc1/surfaceintel.sh --scope /etc/surfaceintel/customer/scope.conf --config /etc/surfaceintel/customer/policy.conf --output /var/lib/surfaceintel/reports --http-checks --cloud-checks --update-baseline >> /var/lib/surfaceintel/customer-scheduler.log 2>&1
+# Weekly:
+# 0 3 * * 0 /usr/bin/timeout -k 30s 20m /opt/surfaceintel/1.0.0-rc1/surfaceintel.sh --scope /etc/surfaceintel/customer/scope.conf --config /etc/surfaceintel/customer/policy.conf --output /var/lib/surfaceintel/reports --http-checks --cloud-checks --update-baseline >> /var/lib/surfaceintel/customer-scheduler.log 2>&1

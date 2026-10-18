@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "organization",
+    "findings",
+    "tool",
+    "tool_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "asset",
+          "asset_id",
+          "status",
+          "fingerprint",
+          "severity",
+          "scope_validation",
+          "evidence",
+          "first_seen",
+          "last_seen",
+          "category",
+          "confidence",
+          "verification_method",
+          "baseline_change",
+          "remediation",
+          "policy_reference"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "asset": {
+            "type": "string"
+          },
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string"
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "severity": {
+            "enum": [
+              "CRITICAL",
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "INFO"
+            ]
+          },
+          "scope_validation": {
+            "enum": [
+              "VALIDATED",
+              "AUTHORIZED_NAME",
+              "BLOCKED",
+              "INCOMPLETE"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "first_seen": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "last_seen": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "category": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH"
+            ]
+          },
+          "verification_method": {
+            "type": "string"
+          },
+          "baseline_change": {
+            "type": "string"
+          },
+          "remediation": {
+            "type": "string"
+          },
+          "policy_reference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tool": {
+      "const": "SurfaceIntel"
+    },
+    "tool_version": {
+      "type": "string"
+    }
+  }
+}

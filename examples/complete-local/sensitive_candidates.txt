@@ -1,0 +1,3 @@
+http://fixture.test:33581/app.js.map
+http://fixture.test:33581/db.sqlite
+http://fixture.test:33581/sitemap.xml

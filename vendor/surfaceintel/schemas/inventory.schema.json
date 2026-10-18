@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "organization",
+    "completion",
+    "scope_hash",
+    "policy_hash",
+    "collected_at",
+    "assets",
+    "config_version",
+    "tool",
+    "tool_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "completion": {
+      "enum": [
+        "complete",
+        "partial",
+        "interrupted"
+      ]
+    },
+    "scope_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "policy_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "collected_at": {
+      "type": "integer"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "id",
+          "asset",
+          "asset_id",
+          "status",
+          "fingerprint",
+          "severity",
+          "scope_validation",
+          "evidence",
+          "first_seen",
+          "last_seen"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "asset": {
+            "type": "string"
+          },
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "type": "string"
+          },
+          "fingerprint": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "severity": {
+            "enum": [
+              "CRITICAL",
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "INFO"
+            ]
+          },
+          "scope_validation": {
+            "enum": [
+              "VALIDATED",
+              "AUTHORIZED_NAME",
+              "BLOCKED",
+              "INCOMPLETE"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "first_seen": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "last_seen": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "config_version": {
+      "type": "string"
+    },
+    "tool": {
+      "const": "SurfaceIntel"
+    },
+    "tool_version": {
+      "type": "string"
+    }
+  }
+}

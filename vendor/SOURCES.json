@@ -1,0 +1,12 @@
+{
+  "origin": "User-owned existing workspace releases; no remote code downloaded",
+  "script_sha256": {
+    "reconscope": "7229313beafc090e4bf2fa1d1227d377d79d355f04489f1ae4bdd0829c7f3769",
+    "urlminer": "6040215d7d33b45d8a229d9e0f8fdd3a85366534945dc54cec140e6f2878a592",
+    "headerguard": "4b7083987b86b87987074b765616c01d0e9bb0da49d82da05a630007bcce7e6f",
+    "dnsshield": "ceadd16cbbfe678546b3a2a80dd62fdb9bd8870dd0d675f95c1cf359343fcf3d",
+    "tlswatch": "efb5e7542f13cb93e1277fdf47096e0a68668097adaef9a2a1a1510f1d22e82f",
+    "surfaceintel": "b8aa0fe06aaa3b7284c887d737ac4bf486e8ccee86746b197cd1fddf1129858a"
+  },
+  "adaptations": "adapters/ contains extracted local-only helpers; original standalone entry points are not automatically executed."
+}

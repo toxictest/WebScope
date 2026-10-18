@@ -1,0 +1,11 @@
+http://fixture.test:33581/
+http://fixture.test:33581/api/data
+http://fixture.test:33581/app.js
+http://fixture.test:33581/app.js.map
+http://fixture.test:33581/chunk.js
+http://fixture.test:33581/db.sqlite
+http://fixture.test:33581/docs/sitemap
+http://fixture.test:33581/docs/start
+http://fixture.test:33581/private/
+http://fixture.test:33581/robots.txt
+http://fixture.test:33581/sitemap.xml

@@ -1,0 +1,3 @@
+# WebScope runtime uses Python 3.9+ standard library only.
+# No third-party pip packages are required for scanning.
+# Install OS dependencies with: bash install_deps.sh --install

@@ -1,0 +1,5 @@
+{
+  "NOISE_EXT": "png jpg jpeg gif svg ico webp bmp tif tiff css woff woff2 ttf eot otf mp4 webm avi mov mp3 m4a wav flv swf psd",
+  "SENSITIVE_EXT": "sql bak old orig save swp swo env ini conf config yaml yml json log csv xml pem key crt p12 pfx jks keystore ppk rdp ovpn kdbx zip tar gz tgz 7z rar dump htpasswd htaccess git svn lock",
+  "SENSITIVE_PATH_TOKENS": ".git/,.env,.svn/,backup,backups,config,/conf/,phpmyadmin,adminer,wp-config,web.config,id_rsa,id_dsa,credentials,secret,api_key,apikey,private_key,.aws/,.ssh/,.npmrc,.docker,phpinfo,error_log,access_log,dump,.ds_store,.htpasswd,.htaccess,vendor/,.well-known/,password,passwd,.key"
+}

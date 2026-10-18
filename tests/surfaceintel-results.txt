@@ -1,0 +1,214 @@
+PASS exact host scope example.test
+PASS exact host scope a.example.test
+PASS exact host scope badexample.test
+PASS exact host scope example.test.attacker.invalid
+PASS exact host scope excluded.example.test
+PASS exact host scope a.excluded.example.test
+PASS exact host scope example.test.
+PASS exact host scope *.example.test
+PASS exact host scope bad;touch.example.test
+PASS destination policy 8.8.8.8
+PASS destination policy 1.1.1.1
+PASS destination policy 127.0.0.1
+PASS destination policy 10.0.0.1
+PASS destination policy 172.16.1.2
+PASS destination policy 192.168.1.1
+PASS destination policy 169.254.169.254
+PASS destination policy 100.100.100.200
+PASS destination policy 0.0.0.0
+PASS destination policy 224.0.0.1
+PASS destination policy 0127.0.0.1
+PASS destination policy 2130706433
+PASS destination policy 0x7f000001
+PASS destination policy 2001:4860:4860::8888
+PASS destination policy ::1
+PASS destination policy fe80::1
+PASS destination policy fd00::1
+PASS destination policy ff02::1
+PASS destination policy ::ffff:127.0.0.1
+PASS destination policy ::ffff:7f00:1
+PASS destination policy 64:ff9b::a9fe:a9fe
+PASS destination policy 2001:db8::1
+PASS destination policy fe80::1%eth0
+PASS CIDR prefix 192.168.2.3 192.168.0.0/16
+PASS CIDR prefix 192.169.2.3 192.168.0.0/16
+PASS CIDR prefix 2001:db8:abcd::1 2001:db8::/32
+PASS CIDR prefix 2001:db9::1 2001:db8::/32
+PASS CIDR prefix ::1 ::1/128
+PASS CIDR prefix ::2 ::1/128
+PASS CIDR prefix 10.1.2.3 10.0.0.0/9
+PASS CIDR prefix 10.129.2.3 10.0.0.0/9
+PASS explicit legitimate local authorization 127.0.0.1
+PASS explicit legitimate local authorization ::1
+PASS metadata remains forbidden under broad CIDR 169.254.169.254
+PASS metadata remains forbidden under broad CIDR fd00:ec2::254
+PASS metadata remains forbidden under broad CIDR 100.100.100.200
+PASS metadata remains forbidden under broad CIDR 169.254.170.2
+PASS metadata remains forbidden under broad CIDR 169.254.0.23
+PASS metadata remains forbidden under broad CIDR 168.63.129.16
+PASS metadata remains forbidden under broad CIDR fd00:ec2::23
+PASS strict URL parser https://api.example.test/
+PASS strict URL parser http://[::1]:8080/
+PASS strict URL parser http://0127.0.0.1/
+PASS strict URL parser http://0x7f.0.0.1/
+PASS strict URL parser http://2130706433/
+PASS strict URL parser https://api.example.test@evil.invalid/
+PASS strict URL parser file:///etc/passwd
+PASS strict URL parser https://api.example.test/?token=secret
+PASS strict URL parser https://api.example.test/%2e%2e/x
+PASS strict URL parser https://api.example.test/a/../b
+PASS strict URL parser https://api.example.test:99999/
+PASS strict URL parser https://api.example.test:/
+PASS strict URL parser https://api.example.test/;touch
+PASS dry run validates without network or storage
+PASS full controlled local audit completes: SurfaceIntel 1.0.0-rc1 | fixture | authorized scope only; serial collection
+Completed: complete | reports: /tmp/surfaceintel-test-dg3uytzt/reports/fixture/run-20261018T122412Z-73721 | baseline updated only if explicitly requested and complete
+
+PASS complete scan status
+PASS real local TLS certificate expiry collected
+PASS default 15-day critical lifecycle priority
+PASS Jenkins response header is potential exposure
+PASS admin route is conservative heuristic
+PASS 200/admin/login never falsely confirms unauthenticated privileges
+PASS ordinary login endpoint is not a dashboard finding
+PASS external redirects never followed
+PASS sensitive data omitted: SECRET_COOKIE
+PASS sensitive data omitted: SECRET_REDIRECT
+PASS sensitive data omitted: SECRET_TXT_VALUE
+PASS sensitive data omitted: PRIVATE_BODY_SENTINEL
+PASS sensitive data omitted: PRIVATE KEY
+PASS HTML escapes hostile server metadata
+PASS escaped evidence remains visible in HTML
+PASS all report files private
+PASS repeat audit succeeds
+PASS repeat evidence is known risk
+PASS timestamps do not invent new assets
+PASS baseline not replaced without explicit flag
+PASS temporary DNS failures mark scan partial
+PASS partial scan preserves successful baseline byte for byte
+PASS DNS failure is not asset removal
+PASS DNS-only baseline established
+PASS DNS change collection succeeds
+PASS address drift detected
+PASS NXDOMAIN is unresolved, not removal
+PASS preconnection guard metadata.example.test
+PASS preconnection guard mixed.example.test
+PASS preconnection guard alias.example.test
+PASS owned HTTP service request deadline bounded
+PASS real local certificate hostname mismatch detected
+PASS provider classification s3 object 200 false
+PASS provider classification azure object 200 false
+PASS provider classification gcs object 200 false
+PASS provider classification s3 bucket 200 false
+PASS provider classification s3 bucket 200 true
+PASS provider classification s3 object 200 false
+PASS provider classification azure object 403 false
+PASS provider classification gcs object 401 false
+PASS provider classification s3 bucket 404 false
+PASS unexpected object entries cannot confirm zero-object verification
+PASS TLS boundary -1
+PASS TLS boundary 1
+PASS TLS boundary 86400
+PASS TLS boundary 86401
+PASS TLS boundary 604801
+PASS TLS boundary 1296001
+PASS TLS boundary 2592001
+PASS webhook transient failure does not break local audit
+PASS bounded retry delivered to owned webhook receiver
+PASS webhook payload JSON valid
+PASS delivery success recorded without destination
+PASS deduplicated alert repeat completes
+PASS unchanged alerts deduplicated inside cooldown
+PASS webhook secret absent from every report/state/log
+PASS provider payload slack
+PASS provider payload discord
+PASS provider payload teams
+PASS malformed or unauthorized configuration rejected
+PASS malformed or unauthorized configuration rejected
+PASS malformed or unauthorized configuration rejected
+PASS malformed or unauthorized configuration rejected
+PASS CLI validates ('--timeout', '0')
+PASS CLI validates ('--concurrency', '99')
+PASS CLI validates ('--rate-limit', '0')
+PASS CLI validates ('--report', 'xml')
+PASS CLI validates ('--dns-only', '--http-checks')
+PASS CLI validates ('--dns-only', '--tls-only')
+PASS passive and active validation separated
+PASS overlapping customer runs refused
+PASS graceful SIGTERM exit
+PASS owned run lock released on interruption
+PASS interrupted scan recorded explicitly
+PASS cross-customer baseline rejected
+PASS baseline never executed
+PASS full JSON Schema validation inventory
+PASS full JSON Schema validation findings
+PASS findings carry structured evidence and policy fields
+PASS real controlled IPv6 HTTP endpoint works without resolver ambiguity: SurfaceIntel 1.0.0-rc1 | v6fixture | authorized scope only; serial collection
+Completed: complete | reports: /tmp/surfaceintel-test-dg3uytzt/v6out/v6fixture/run-20261018T122428Z-86414 | baseline updated only if explicitly requested and complete
+
+PASS core runtime works with Python/jq absent from PATH: SurfaceIntel 1.0.0-rc1 | fixture | authorized scope only; serial collection
+Completed: complete | reports: /tmp/surfaceintel-test-dg3uytzt/minimal-out/fixture/run-20261018T122429Z-86706 | baseline updated only if explicitly requested and complete
+
+PASS native Bash serializer emits valid JSON without jq
+PASS approved redirect chain completes
+PASS redirect destination revalidated and followed once
+PASS HTTP rate limiter enforces spacing
+PASS webhook outage recorded while local audit continues
+PASS cloud object verification requests HEAD, never GET
+PASS cloud module preserves provider-specific HEAD evidence
+PASS cloud namespace URL rejected s3
+PASS cloud namespace URL rejected azure
+PASS cloud namespace URL rejected gcs
+PASS missing TLS utility produces unavailable evidence
+PASS invalid historical state rejected duplicate
+PASS invalid historical state rejected invalid-status
+PASS invalid historical state rejected NUL
+PASS invalid historical state rejected bad-version
+PASS SIGINT has documented exit code
+PASS interrupted explicit update preserves successful baseline
+PASS renewed local TLS certificate collected
+PASS certificate renewal resolves prior lifecycle finding with positive evidence
+PASS opt-in scheduled-equivalent baseline update
+PASS opt-in scheduled-equivalent baseline update
+PASS opt-in scheduled-equivalent baseline update
+PASS opt-in scheduled-equivalent baseline update
+PASS configured report retention enforced
+PASS previous baseline retention enforced
+PASS ambiguous address rejected 1.2.3.4.
+PASS ambiguous address rejected ::1:
+PASS ambiguous address rejected :1::2
+PASS ambiguous address rejected 1:2:3:4:5:6:7:8:
+PASS ambiguous address rejected 0x7f.0.0.1
+PASS non-network-aligned CIDR rejected 192.168.1.1/24
+PASS non-network-aligned CIDR rejected 2001:db8::1/64
+PASS non-network-aligned CIDR rejected 127.0.0.1/8
+PASS special/unallocated IPv6 not treated as public 64:ff9b:1::a9fe:a9fe
+PASS special/unallocated IPv6 not treated as public 4000::1
+PASS novelty alone cannot be elevated to critical
+PASS explicit policy severity override works
+PASS category-filtered INFO candidate/delta alerts delivered
+PASS changed alert destination has independent deduplication state
+PASS dangling organization-marker symlink rejected without write-through
+PASS delivery-cache symlink cannot overwrite unrelated files
+PASS installer default is a no-write plan
+PASS confirmed install uses only a new owned test directory
+PASS installed executable validates a plan
+PASS installer will not overwrite existing release
+PASS installer rejects root destination
+PASS scheduled command with external wall-clock supervisor works
+PASS opt-in landing-page title collected from controlled GET
+PASS full preview body never exported
+PASS oversized real HTTP response marks scan partial
+PASS CT names are candidates filtered by exact authorization
+PASS passive discovery provenance recorded
+PASS out-of-scope discovery candidate rejected, not probed
+PASS CT service role explicitly enabled
+PASS provider permission does not expand asset scope
+PASS unapproved webhook host blocked
+PASS cloud authorization does not extend to neighboring objects
+PASS noncanonical cloud XML fails closed object-attributes
+PASS noncanonical cloud XML fails closed comment-spoof
+PASS dry run rejects malformed asset imports without side effects
+PASS dry run validates supplied baseline without output creation
+
+RESULT: 206 passed, 0 failed

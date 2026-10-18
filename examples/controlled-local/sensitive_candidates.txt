@@ -1,0 +1,11 @@
+http://fixture.test:33581/.env
+http://fixture.test:33581/app.js.map
+http://fixture.test:33581/backup.sql
+http://fixture.test:33581/db.sqlite
+http://fixture.test:33581/private/secret
+http://fixture.test:33581/sitemap.xml
+http://sub.fixture.test:33581/.env
+http://sub.fixture.test:33581/app.js.map
+http://sub.fixture.test:33581/backup.sql
+http://sub.fixture.test:33581/private/secret
+http://sub.fixture.test:33581/sitemap.xml

@@ -1,0 +1,8 @@
+http://fixture.test:33581/
+http://fixture.test:33581/api/
+http://fixture.test:33581/docs/
+http://fixture.test:33581/private/
+http://sub.fixture.test:33581/
+http://sub.fixture.test:33581/api/
+http://sub.fixture.test:33581/docs/
+http://sub.fixture.test:33581/private/

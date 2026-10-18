@@ -1,0 +1,8 @@
+http://fixture.test:33581/app.js
+http://fixture.test:33581/chunk.js
+http://fixture.test:33581/huge.js
+http://fixture.test:33581/query.js
+http://sub.fixture.test:33581/app.js
+http://sub.fixture.test:33581/chunk.js
+http://sub.fixture.test:33581/huge.js
+http://sub.fixture.test:33581/query.js

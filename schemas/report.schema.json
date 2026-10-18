@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WebScope report v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "started_at",
+    "finished_at",
+    "domain",
+    "scope_sha256",
+    "schema_version",
+    "tool",
+    "version",
+    "completion",
+    "scope",
+    "coverage",
+    "limits",
+    "integrations",
+    "rejected_counts",
+    "errors",
+    "directory_prefixes",
+    "hosts",
+    "dns",
+    "tls",
+    "headers",
+    "potential_js_literals",
+    "urls"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "finished_at": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "scope_sha256": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1"
+    },
+    "tool": {
+      "const": "WebScope"
+    },
+    "version": {
+      "const": "1.0.0-rc2"
+    },
+    "completion": {
+      "enum": [
+        "partial",
+        "complete_within_declared_limits"
+      ]
+    },
+    "scope": {
+      "type": "object"
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "limits": {
+      "type": "object"
+    },
+    "integrations": {
+      "type": "object"
+    },
+    "rejected_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "directory_prefixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hosts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "dns": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "tls": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "headers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "potential_js_literals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "urls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "url": {
+            "type": "string"
+          },
+          "kinds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "http_status": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 599
+          },
+          "sensitive_candidate": {
+            "type": "boolean"
+          },
+          "query_redacted": {
+            "type": "boolean"
+          },
+          "directory_evidence": {
+            "type": "string"
+          },
+          "body_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "body_bytes": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65536
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "kinds",
+          "sources",
+          "status",
+          "http_status",
+          "sensitive_candidate",
+          "query_redacted",
+          "directory_evidence"
+        ]
+      }
+    }
+  }
+}

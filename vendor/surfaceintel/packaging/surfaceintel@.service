@@ -1,0 +1,22 @@
+[Unit]
+Description=SurfaceIntel authorized monitoring for %i
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=surfaceintel
+Group=surfaceintel
+UMask=0077
+EnvironmentFile=-/etc/surfaceintel/%i/webhooks.env
+ExecStart=/opt/surfaceintel/1.0.0-rc1/surfaceintel.sh --scope /etc/surfaceintel/%i/scope.conf --config /etc/surfaceintel/%i/policy.conf --output /var/lib/surfaceintel/reports --http-checks --cloud-checks --update-baseline
+# Explicitly review the active-check flags before deploying this example.
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/surfaceintel
+TimeoutStartSec=20min
+KillMode=control-group
+Nice=10
+IOSchedulingClass=idle

@@ -1,0 +1,10 @@
+dns	api.example.test	One or more DNS record types could not be collected.
+dns	example.test	One or more DNS record types could not be collected.
+tls	https://api.example.test:33405/	DNS_INCOMPLETE
+http	http://api.example.test:43043/	DNS_INCOMPLETE
+http	http://api.example.test:43043/jenkins	DNS_INCOMPLETE
+http	http://api.example.test:43043/admin	DNS_INCOMPLETE
+http	http://api.example.test:43043/login	DNS_INCOMPLETE
+http	http://api.example.test:43043/redirect	DNS_INCOMPLETE
+http	http://api.example.test:43043/redirect-secret	DNS_INCOMPLETE
+http	https://api.example.test:33405/	DNS_INCOMPLETE

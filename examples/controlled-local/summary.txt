@@ -1,0 +1,7 @@
+WebScope 1.0.0-rc2
+Domain: fixture.test
+Completion: partial
+Hosts: 2 | URLs: 39 | HTTP/TLS/provider operations: 49
+JavaScript URLs: 8 | Sensitive-path candidates: 11
+No completeness, directory existence, credential validity or sensitive-content exposure claim.
+Errors/limits: REQUEST_FAILED:REQUEST_FAILED, GET_INCOMPLETE

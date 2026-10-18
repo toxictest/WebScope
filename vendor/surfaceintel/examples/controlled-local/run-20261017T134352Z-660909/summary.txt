@@ -1,0 +1,69 @@
+SurfaceIntel 1.0.0-rc1 — fixture
+Run: 20261017T134352Z | Completion: partial | Mode: normal-1-0
+Assets: 9 | Findings: 0 | Coverage errors/skips: 10
+Added candidates: 0 | Removed from scope: 0 | DNS deltas: 2 | Resolved observations: 0
+Policy version: test1
+Scope hash: d4a9240f079f9f6ac28e46951e36a67fe2de1c1d063a74130b79c4698442721e
+Policy hash: 5d95765f63b9c00471caf4d857462d373d17e94bb1691721f424aea8f8a834af
+Previous baseline scope: d4a9240f079f9f6ac28e46951e36a67fe2de1c1d063a74130b79c4698442721e
+Concurrency ceiling: 1; actual engine concurrency: 1 (serial safety mode)
+CRITICAL findings: 0
+HIGH findings: 0
+MEDIUM findings: 0
+LOW findings: 0
+INFO findings: 0
+
+TLS EXPIRY CATEGORIES
+
+CLOUD ACCESS CATEGORIES
+
+REJECTED CANDIDATES (NOT PROBED)
+
+OBSERVATIONS
+asset	3e2fbcfc1717013e82dd58cf1a5a94b17ede775aedf4982132f5a2a86ba58d50	api.example.test	CANDIDATE	e2d7c8d276337be3814b586e412ddfef8fa9e874069b722490d1576e01680217	INFO	1792244627	1792244632	sources=baseline,configured,;In explicit scope; discovery is not proof of resolution, ownership or exposure.
+asset	dcc8c2eebc77da8b67142c67ae5a6b8a9f6d861d4376e035fc6a69ea874a75eb	example.test	CANDIDATE	af4d6a95fea115ea4fa7f19d1c5ca2170483212ef5e3e52c49e40a4cd0894819	INFO	1792244627	1792244632	sources=baseline,configured,;In explicit scope; discovery is not proof of resolution, ownership or exposure.
+dns	4ecc6579d54d574f1a25c0f9235a1f5fa2ba21589c80c3a66782a534ffe1b997	api.example.test	COLLECTION_FAILED	ebb24cf31b7f180ac766baba9168ad720dd0bebf68c9dad3ed263a94b8b8ed62	INFO	1792244627	1792244632	A=;status=TEMPORARY_FAILURE;ttl=;source=dig;AAAA=;status=TEMPORARY_FAILURE;ttl=;source=dig;CNAME=;status=TEMPORARY_FAILURE;ttl=;source=dig;MX=;status=TEMPORARY_FAILURE;ttl=;source=dig;NS=;status=TEMPORARY_FAILURE;ttl=;source=dig;TXT=;status=TEMPORARY_FAILURE;ttl=;source=dig;
+dns	d52e51d6472ea9c90bca984fb46c01346f841380dc7bdc7642d3a08d3d3e233b	example.test	COLLECTION_FAILED	7f69adb8eb3e39110ce827bdb98417e9177d001da115453c77e6b6cda8b4e283	INFO	1792244627	1792244632	A=;status=TEMPORARY_FAILURE;ttl=;source=dig;AAAA=;status=TEMPORARY_FAILURE;ttl=;source=dig;CNAME=;status=TEMPORARY_FAILURE;ttl=;source=dig;MX=;status=TEMPORARY_FAILURE;ttl=;source=dig;NS=;status=TEMPORARY_FAILURE;ttl=;source=dig;TXT=;status=TEMPORARY_FAILURE;ttl=;source=dig;
+tls	1dc8aded116abb4cba57f81859d54466dc38b0498bd75e403f1c8aa08fd79152	https://api.example.test:33405/	COLLECTION_FAILED	ec2a476262369516db67f80a803c72d454a91218a019d37532f2f2d7b6556261	INFO	1792244627	1792244632	No TLS conclusion; destination validation/resolution failed.
+http	8104cf17f0d8e2733994d00c0f13cc42f65a5eef8c0b2e44dddade60708a9359	http://api.example.test:43043/	DNS_INCOMPLETE	842a7f538c4ef2a568f7d1da9f9cf35d39c312f0798865c38f61a5bd57c4a920	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	ab818fb2bbfadfcbc532ed5759ace9996a3fb3555368e9112721202511756770	http://api.example.test:43043/jenkins	DNS_INCOMPLETE	9f00772f74014b44ef38659354e917c53067cae39f05663d736a2f16c93dc9ff	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	3d0614b5e99638d55d72c1d26281f1ef9a81833ce329d75c4c5a72440a9f6987	http://api.example.test:43043/admin	DNS_INCOMPLETE	c94961d9c9eb23292f3657b943a688d5dbbaeb716ebbc5d8b75d1366c348402a	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	e648de074be753fda7441d3e477ba48578dc1d8e32bdc23af65f5960245bb6df	http://api.example.test:43043/login	DNS_INCOMPLETE	44e22892dc06924c20ad9388007892eacb6ba4a7e6ceea7ea1bd189fcf4a21ef	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	c3f25e2642271c05253f20c7ba01fd3bcdd818e7889297b9f5da431e2a4efb6a	http://api.example.test:43043/redirect	DNS_INCOMPLETE	860aec99d4b3add68754bb7d4b43df6aea70e601e9c957a6bd2ecbf72cfd148d	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	aa3e58a5abe703528f5586960435e9d4eb5e4d10678926027321ee3e87c826ab	http://api.example.test:43043/redirect-secret	DNS_INCOMPLETE	832ae550d722197f66b69f888f76c8121e20c444fef86c464869ef127476c101	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+http	34d611266f2f123b93a96bec3641d26fda029354007294d1d02df6dab17ece40	https://api.example.test:33405/	DNS_INCOMPLETE	41e8baafa33d271969207bedf2de6f1161cec320e843d52e8836eff145652e3a	INFO	1792244627	1792244632	No HTTP conclusion;reason=DNS_INCOMPLETE;curl_exit=0
+
+DELTA
+UNCHANGED	3e2fbcfc1717013e82dd58cf1a5a94b17ede775aedf4982132f5a2a86ba58d50	asset	api.example.test	INFO
+UNCHANGED	dcc8c2eebc77da8b67142c67ae5a6b8a9f6d861d4376e035fc6a69ea874a75eb	asset	example.test	INFO
+NEWLY_UNAVAILABLE	4ecc6579d54d574f1a25c0f9235a1f5fa2ba21589c80c3a66782a534ffe1b997	dns	api.example.test	INFO
+NEWLY_UNAVAILABLE	d52e51d6472ea9c90bca984fb46c01346f841380dc7bdc7642d3a08d3d3e233b	dns	example.test	INFO
+NEWLY_UNAVAILABLE	1dc8aded116abb4cba57f81859d54466dc38b0498bd75e403f1c8aa08fd79152	tls	https://api.example.test:33405/	INFO
+NEWLY_UNAVAILABLE	8104cf17f0d8e2733994d00c0f13cc42f65a5eef8c0b2e44dddade60708a9359	http	http://api.example.test:43043/	INFO
+NEWLY_UNAVAILABLE	ab818fb2bbfadfcbc532ed5759ace9996a3fb3555368e9112721202511756770	http	http://api.example.test:43043/jenkins	INFO
+NEWLY_UNAVAILABLE	3d0614b5e99638d55d72c1d26281f1ef9a81833ce329d75c4c5a72440a9f6987	http	http://api.example.test:43043/admin	INFO
+NEWLY_UNAVAILABLE	e648de074be753fda7441d3e477ba48578dc1d8e32bdc23af65f5960245bb6df	http	http://api.example.test:43043/login	INFO
+NEWLY_UNAVAILABLE	c3f25e2642271c05253f20c7ba01fd3bcdd818e7889297b9f5da431e2a4efb6a	http	http://api.example.test:43043/redirect	INFO
+NEWLY_UNAVAILABLE	aa3e58a5abe703528f5586960435e9d4eb5e4d10678926027321ee3e87c826ab	http	http://api.example.test:43043/redirect-secret	INFO
+NEWLY_UNAVAILABLE	34d611266f2f123b93a96bec3641d26fda029354007294d1d02df6dab17ece40	http	https://api.example.test:33405/	INFO
+NOT_OBSERVED	db08968c7beaf10cec6e6deaaa18c5224cb6549609b92858dd0306ab1122bdcb	finding	MANAGEMENT_INTERFACE_POTENTIAL|http://api.example.test:43043/jenkins	HIGH
+NOT_OBSERVED	c90f12e28e52fc77f5b4561c85921056ef31e221a6f20a809a9e6e84fb0f435e	finding	CERTIFICATE_LIFECYCLE|https://api.example.test:33405/	CRITICAL
+NOT_OBSERVED	8df3f27d1477d4e098db1ae51d72f890c9bb06e3e456fc0cbdefe618a66e88e6	finding	OUT_OF_SCOPE_REDIRECT|http://api.example.test:43043/redirect	LOW
+NOT_OBSERVED	402e25fe5358d2c88a6b78cb136645bfda6e4af2c9b85754a01a276b80df97d8	finding	ADMIN_ROUTE_POTENTIAL|http://api.example.test:43043/admin	MEDIUM
+
+COVERAGE ERRORS / SKIPS
+dns	api.example.test	One or more DNS record types could not be collected.
+dns	example.test	One or more DNS record types could not be collected.
+tls	https://api.example.test:33405/	DNS_INCOMPLETE
+http	http://api.example.test:43043/	DNS_INCOMPLETE
+http	http://api.example.test:43043/jenkins	DNS_INCOMPLETE
+http	http://api.example.test:43043/admin	DNS_INCOMPLETE
+http	http://api.example.test:43043/login	DNS_INCOMPLETE
+http	http://api.example.test:43043/redirect	DNS_INCOMPLETE
+http	http://api.example.test:43043/redirect-secret	DNS_INCOMPLETE
+http	https://api.example.test:33405/	DNS_INCOMPLETE
+
+ALERT DELIVERY
+
+LIMITATIONS
+No exploitation, credential guessing or authentication bypass. HTTP success/login pages are not unauthenticated-admin proof. Cloud object bytes are never fetched; object-read findings are provider HEAD-permission evidence. Names absent from discovery are not automatically removed. DNS/anycast/CDN changes are not intrinsically malicious. Only one validated address per endpoint is connected; all returned addresses must pass policy. Reports are scoped observations, not a guarantee of security.

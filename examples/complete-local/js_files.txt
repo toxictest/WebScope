@@ -1,0 +1,2 @@
+http://fixture.test:33581/app.js
+http://fixture.test:33581/chunk.js

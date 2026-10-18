@@ -1,0 +1,7 @@
+WebScope 1.0.0-rc2
+Domain: fixture.test
+Completion: complete_within_declared_limits
+Hosts: 1 | URLs: 11 | HTTP/TLS/provider operations: 17
+JavaScript URLs: 2 | Sensitive-path candidates: 3
+No completeness, directory existence, credential validity or sensitive-content exposure claim.
+Errors/limits: none recorded
